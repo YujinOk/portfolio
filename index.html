@@ -15,9 +15,10 @@
   </head>
   <body>
     <header>
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-pink">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="index.html">Home</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -29,18 +30,30 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <!-- Collapse feature -->
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <!-- breakpoints e.g. sm < 450px , md <750px -->
               <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="#"
+                <a
+                  class="nav-link text-white"
+                  aria-current="page"
+                  href="./html/about.html"
                   >About</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Projects</a>
+                <a class="nav-link text-white" href="./html/project.html"
+                  >Projects</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white">Contact</a>
+                <a
+                  class="nav-link text-white"
+                  href="#contact
+                "
+                  >Contact</a
+                >
               </li>
             </ul>
           </div>
@@ -49,7 +62,9 @@
     </header>
 
     <main>
+      <!-- Carousel - sliding images (needs JS)-->
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators are for the carousel interface/buttons -->
         <div class="carousel-indicators">
           <button
             type="button"
@@ -72,82 +87,61 @@
             aria-label="Slide 3"
           ></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <svg
-              class="bd-placeholder-img"
-              width="100%"
-              height="100%"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <rect width="100%" height="100%" fill="#777" />
-            </svg>
 
+        <!-- Holds the images part-->
+        <div class="carousel-inner">
+          <!-- First carousel item -->
+          <div class="carousel-item bg-orange active">
+            <div class="container__titleImg">
+              <!-- <img class="title-img" src="img/profilephoto.jpg" alt="" /> -->
+            </div>
+            <!-- Container holds the text -->
             <div class="container">
-              <div class="carousel-caption text-start">
+              <div class="carousel-caption text-start text-white">
                 <h1>I'm Yujin</h1>
                 <p>
                   I am an aspiring web developer who loves to turn virtually any
                   idea into reality!
                 </p>
-                <!-- <p>
-                  <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
-                </p> -->
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <svg
-              class="bd-placeholder-img"
-              width="100%"
-              height="100%"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <rect width="100%" height="100%" fill="#777" />
-            </svg>
 
+          <!-- 2nd Item -->
+          <div class="carousel-item bg-orange">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Tech language pictures go here.</h1>
 
+                <!-- Button -->
                 <p>
-                  <a class="btn btn-lg bg-pink text-white" href="#"
+                  <a
+                    class="btn btn-lg btn-secondary btn-pink text-white"
+                    href="#"
                     >See my projects</a
                   >
                 </p>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <svg
-              class="bd-placeholder-img"
-              width="100%"
-              height="100%"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <rect width="100%" height="100%" fill="#777" />
-            </svg>
 
+          <!-- 3rd Carousel item -->
+          <div class="carousel-item bg-orange">
             <div class="container">
               <div class="carousel-caption text-end">
                 <h1>Keen to know more about me?</h1>
                 <br />
+                <!-- button -->
                 <p>
-                  <a class="btn btn-lg bg-pink" href="#">More about me</a>
+                  <a class="btn btn-lg btn-secondary btn-pink" href="#"
+                    >More about me</a
+                  >
                 </p>
               </div>
             </div>
           </div>
         </div>
+
         <button
           class="carousel-control-prev"
           type="button"
@@ -157,6 +151,7 @@
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
+
         <button
           class="carousel-control-next"
           type="button"
@@ -168,14 +163,11 @@
         </button>
       </div>
 
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
       <div class="container marketing">
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
+            <!-- In bootstrap the width of a row is 12, and columns can only take up to the max of 12-->
             <svg
               class="bd-placeholder-img rounded-circle"
               width="140"
@@ -187,16 +179,20 @@
               focusable="false"
             >
               <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#777" />
-              <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+              <rect width="100%" height="100%" fill="#ffdaca" />
+              <text x="50%" y="50%" fill="#ffdaca" dy=".3em">140x140</text>
+              <text x="50%" y="50%" fill="#ffdaca" dy=".3em">140x140</text>
             </svg>
 
-            <h2>Project 1</h2>
-            <p>Tech skills used:</p>
+            <h2 class="text-color">Project 1</h2>
+            <p class="text-color">Tech skills used:</p>
             <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
+              <a class="btn btn-secondary btn-pink" href="#"
+                >View details &raquo;</a
+              >
             </p>
           </div>
+
           <!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <svg
@@ -210,16 +206,19 @@
               focusable="false"
             >
               <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#777" />
-              <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+              <rect width="100%" height="100%" fill="#ffdaca" />
+              <text x="50%" y="50%" fill="#ffdaca" dy=".3em">140x140</text>
             </svg>
 
-            <h2>Project 2</h2>
-            <p>Tech skills used:</p>
+            <h2 class="text-color">Project 2</h2>
+            <p class="text-color">Tech skills used:</p>
             <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
+              <a class="btn btn-secondary btn-pink" href="#"
+                >View details &raquo;</a
+              >
             </p>
           </div>
+
           <!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <svg
@@ -233,14 +232,16 @@
               focusable="false"
             >
               <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#777" />
-              <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+              <rect width="100%" height="100%" fill="#ffdaca" />
+              <text x="50%" y="50%" fill="#ffdaca" dy=".3em">140x140</text>
             </svg>
 
-            <h2>Project 3</h2>
-            <p>Tech skills used:</p>
+            <h2 class="text-color">Project 3</h2>
+            <p class="text-color">Tech skills used:</p>
             <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
+              <a class="btn btn-secondary btn-pink" href="#"
+                >View details &raquo;</a
+              >
             </p>
           </div>
           <!-- /.col-lg-4 -->
@@ -253,15 +254,15 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">
-              First featurette heading.
-              <span class="text-muted">It’ll blow your mind.</span>
+            <h2 class="featurette-heading text-color">
+              Snap shot of "About" section goes here with diff pictures
             </h2>
             <p class="lead">
-              Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.
+              <!-- Some great placeholder content for the first featurette here.
+              Imagine some exciting prose here. -->
             </p>
           </div>
+
           <div class="col-md-5">
             <svg
               class="
@@ -289,16 +290,15 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">
-              Oh yeah, it’s that good.
-              <span class="text-muted">See for yourself.</span>
-            </h2>
+            <h2 class="featurette-heading text-color">CV/ Experience maybe?</h2>
             <p class="lead">
-              Another featurette? Of course. More placeholder content here to
+              <!-- Another featurette? Of course. More placeholder content here to
               give you an idea of how this layout would work with some actual
-              real-world content in place.
+              real-world content in place. -->
             </p>
           </div>
+          <!-- Bootstrap Order class has used to display image and text accodring to their position 
+            Similar to how order attribute is used in flexbox -->
           <div class="col-md-5 order-md-1">
             <svg
               class="
@@ -326,36 +326,25 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">
-              And lastly, this one. <span class="text-muted">Checkmate.</span>
-            </h2>
-            <p class="lead">
-              And yes, this is the last block of representative placeholder
-              content. Again, not really intended to be actually read, simply
-              here to give you a better view of what this would look like with
-              some actual content. Your content.
+            <h2 class="featurette-heading text-color">Get in touch with me!</h2>
+            <p class="lead text-color">
+              You have an idea in your mind? reach out! I'd love to have a chat!
             </p>
           </div>
-          <div class="col-md-5">
-            <svg
-              class="
-                bd-placeholder-img bd-placeholder-img-lg
-                featurette-image
-                img-fluid
-                mx-auto
-              "
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
+          <div class="col-md-5" id="contact">
+            <a href="https://www.linkedin.com/in/yujin-ok-726a99173/"
+              ><img class="contact__img" src="./img/likedinOrange.png" alt=""
+            /></a>
+
+            <a href="tel:0424358191"
+              ><img class="contact__img" src="./img/phoneOrange.png" alt=""
+            /></a>
+            <a href="https://github.com/YujinOk"
+              ><img class="contact__img" src="./img/githubOrange.png" alt=""
+            /></a>
+            <a href="mailto:yujinok63@gmail.com"
+              ><img class="contact__img" src="./img/emailOrange.png" alt=""
+            /></a>
           </div>
         </div>
 
