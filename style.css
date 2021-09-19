@@ -88,5 +88,34 @@ body {
   }
 }
 .bg-pink {
-  background-color: rgb(233, 168, 168);
+  background-color: #ff857a;
+}
+
+.btn-pink {
+  background-color: #ff857a;
+  border-style: none;
+}
+
+.contact__img {
+  height: 200px;
+  width: 200px;
+  margin: 3%;
+}
+.bg-orange {
+  background-color: #ffbdaf;
+}
+.title-img {
+  height: 350px;
+  width: 340px;
+  border-radius: 10%;
+}
+.container__titleImg {
+  display: flex;
+  margin-top: 2%;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20%;
+}
+.text-color {
+  color: #ff857a;
 }
