@@ -11,53 +11,64 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+            rel="stylesheet"
+        />
     <title>My landing Page</title>
   </head>
   <body>
     <header>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-pink">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">Home</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Collapse feature -->
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <!-- breakpoints e.g. sm < 450px , md <750px -->
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white"
-                  aria-current="page"
-                  href="about.html"
-                  >About</a
+      <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-pink">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Home</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
                 >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="project.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white"
-                  href="../index.html#contact
-                "
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapse feature -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <!-- breakpoints e.g. sm < 450px , md <750px -->
+                        <li class="nav-item">
+                            <a
+                                class="nav-link text-white"
+                                aria-current="page"
+                                href="#"
+                                >About</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../index.html#projects"
+                                >Projects</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link text-white"
+                                href="../index.html#contact
+            "
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
+
 
     <main>
       <!-- Carousel - sliding images (needs JS)-->
@@ -73,7 +84,9 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">My Journey started from ...</h2>
+            <!-- <h2 class="featurette-heading">My Journey started from ...</h2> -->
+
+            <h1>My Journey started from...</h1>
             <br />
             <p class="lead">
               I am originally from South Korea, but I have travelled to several
@@ -102,8 +115,8 @@
             </p>
           </div>
 
-          <div class="col-md-5">
-            <img class="gangnamstyle" src="../img/gangnamstyle.png" />
+          <div class="col-md-5 d-flex justify-content-center">
+            <img class="gangnamstyle" src="../img/psy.jpg" />
           </div>
         </div>
 
@@ -111,7 +124,8 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">My career in the past...</h2>
+            <h1>My career in the past...</h1>
+            <!-- <h2 class="featurette-heading">My career in the past...</h2> -->
             <p class="lead">
               <br />
               I have always LOVED dancing since I started being able to walk. I
@@ -139,8 +153,8 @@
           <div class="col-md-5 order-md-1">
             <img
               class="dance"
-              src="../img/dance.jpg"
-              width="370px"
+              src="../img/dance2.jpg"
+              width="360px"
               height="500px"
             />
           </div>
@@ -150,7 +164,8 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">How I got into coding...</h2>
+            <h1>How I got into coding...</h1>
+            <!-- <h2 class="featurette-heading">How I got into coding...</h2> -->
             <br />
             <p class="lead">
               As the pandemic hit in 2020, just like many of you, I was stuck at
@@ -179,10 +194,10 @@
               development.
             </p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5 d-flex justify-content-center">
             <img
               class="lab"
-              src="../img/lab.jpg"
+              src="../img/lab2.jpg"
               height="500px"
               width="400px"
             />
