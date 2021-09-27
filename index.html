@@ -1,380 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>My landing Page</title>
-  </head>
-  <body>
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-pink">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Home</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Collapse feature -->
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <!-- breakpoints e.g. sm < 450px , md <750px -->
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white"
-                  aria-current="page"
-                  href="./html/about.html"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="./html/project.html"
-                  >Projects</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white"
-                  href="#contact
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+            crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- Poppins 500 Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <title>My landing Page</title>
+    </head>
+    <body>
+        <header>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-pink">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Home</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse"
+                        aria-controls="navbarCollapse"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Collapse feature -->
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <!-- breakpoints e.g. sm < 450px , md <750px -->
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-white"
+                                    aria-current="page"
+                                    href="./html/about.html"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#projects"
+                                    >Projects</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-white"
+                                    href="#contact
                 "
-                  >Contact</a
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Carousel - sliding images (needs JS)-->
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators are for the carousel interface/buttons -->
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#myCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#myCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#myCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                </div>
+
+                <!-- Holds the images part-->
+                <div class="carousel-inner">
+                    <!-- First carousel item -->
+                    <div class="carousel-item bg-orange active">
+                        <div class="container__titleImg">
+                            <img
+                                class="title-img"
+                                src="img/profile2.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <!-- Container holds the text -->
+                        <div class="container">
+                            <div class="carousel-caption text-start text-white">
+                                <h1>I'm Yujin</h1>
+                                <p>
+                                    I am an aspiring web developer who loves to
+                                    turn virtually any idea into reality!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2nd Item -->
+                    <div class="carousel-item bg-orange">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Tech language pictures go here.</h1>
+
+                                <!-- Button -->
+                                <p>
+                                    <a
+                                        class="
+                                            btn btn-lg btn-secondary btn-pink
+                                            text-white
+                                        "
+                                        href="#"
+                                        >See my projects</a
+                                    >
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3rd Carousel item -->
+                    <div class="carousel-item bg-orange">
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>Keen to know more about me?</h1>
+                                <br />
+                                <!-- button -->
+                                <p>
+                                    <a
+                                        class="
+                                            btn btn-lg btn-secondary btn-pink
+                                        "
+                                        href="#"
+                                        >More about me</a
+                                    >
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide="prev"
                 >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
 
-    <main>
-      <!-- Carousel - sliding images (needs JS)-->
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicators are for the carousel interface/buttons -->
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-
-        <!-- Holds the images part-->
-        <div class="carousel-inner">
-          <!-- First carousel item -->
-          <div class="carousel-item bg-orange active">
-            <div class="container__titleImg">
-              <!-- <img class="title-img" src="img/profilephoto.jpg" alt="" /> -->
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <!-- Container holds the text -->
-            <div class="container">
-              <div class="carousel-caption text-start text-white">
-                <h1>I'm Yujin</h1>
-                <p>
-                  I am an aspiring web developer who loves to turn virtually any
-                  idea into reality!
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <!-- 2nd Item -->
-          <div class="carousel-item bg-orange">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Tech language pictures go here.</h1>
+            <div class="container marketing" id="projects">
+                <!-- Three columns of text below the carousel -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <!-- In bootstrap the width of a row is 12, and columns can only take up to the max of 12-->
+                        <svg
+                            class="bd-placeholder-img rounded-circle"
+                            width="140"
+                            height="140"
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="img"
+                            aria-label="Placeholder: 140x140"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                        >
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#ffdaca" />
+                            <text x="50%" y="50%" fill="#ffdaca" dy=".3em">
+                                140x140
+                            </text>
+                            <text x="50%" y="50%" fill="#ffdaca" dy=".3em">
+                                140x140
+                            </text>
+                        </svg>
 
-                <!-- Button -->
-                <p>
-                  <a
-                    class="btn btn-lg btn-secondary btn-pink text-white"
-                    href="#"
-                    >See my projects</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
+                        <h2 class="text-color">Project 1</h2>
+                        <p class="text-color">Tech skills used:</p>
+                        <p>
+                            <a class="btn btn-pink text-white" href="#"
+                                >View details &raquo;</a
+                            >
+                        </p>
+                    </div>
 
-          <!-- 3rd Carousel item -->
-          <div class="carousel-item bg-orange">
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>Keen to know more about me?</h1>
-                <br />
-                <!-- button -->
-                <p>
-                  <a class="btn btn-lg btn-secondary btn-pink" href="#"
-                    >More about me</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+                    <!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <svg
+                            class="bd-placeholder-img rounded-circle"
+                            width="140"
+                            height="140"
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="img"
+                            aria-label="Placeholder: 140x140"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                        >
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#ffdaca" />
+                            <text x="50%" y="50%" fill="#ffdaca" dy=".3em">
+                                140x140
+                            </text>
+                        </svg>
 
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
+                        <h2 class="text-color">Project 2</h2>
+                        <p class="text-color">Tech skills used:</p>
+                        <p>
+                            <a class="btn btn-pink text-white" href="#"
+                                >View details &raquo;</a
+                            >
+                        </p>
+                    </div>
 
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+                    <!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <svg
+                            class="bd-placeholder-img rounded-circle"
+                            width="140"
+                            height="140"
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="img"
+                            aria-label="Placeholder: 140x140"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                        >
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#ffdaca" />
+                            <text x="50%" y="50%" fill="#ffdaca" dy=".3em">
+                                140x140
+                            </text>
+                        </svg>
 
-      <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <!-- In bootstrap the width of a row is 12, and columns can only take up to the max of 12-->
-            <svg
-              class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 140x140"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#ffdaca" />
-              <text x="50%" y="50%" fill="#ffdaca" dy=".3em">140x140</text>
-              <text x="50%" y="50%" fill="#ffdaca" dy=".3em">140x140</text>
-            </svg>
+                        <h2 class="text-color">Project 3</h2>
+                        <p class="text-color">Tech skills used:</p>
+                        <p>
+                            <a class="btn btn-pink text-white" href="#"
+                                >View details &raquo;</a
+                            >
+                        </p>
+                    </div>
+                    <!-- /.col-lg-4 -->
+                </div>
+                <!-- /.row -->
 
-            <h2 class="text-color">Project 1</h2>
-            <p class="text-color">Tech skills used:</p>
-            <p>
-              <a class="btn btn-secondary btn-pink" href="#"
-                >View details &raquo;</a
-              >
-            </p>
-          </div>
+                <!-- START THE FEATURETTES -->
 
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg
-              class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 140x140"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#ffdaca" />
-              <text x="50%" y="50%" fill="#ffdaca" dy=".3em">140x140</text>
-            </svg>
+                <hr class="featurette-divider" />
 
-            <h2 class="text-color">Project 2</h2>
-            <p class="text-color">Tech skills used:</p>
-            <p>
-              <a class="btn btn-secondary btn-pink" href="#"
-                >View details &raquo;</a
-              >
-            </p>
-          </div>
-
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg
-              class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 140x140"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#ffdaca" />
-              <text x="50%" y="50%" fill="#ffdaca" dy=".3em">140x140</text>
-            </svg>
-
-            <h2 class="text-color">Project 3</h2>
-            <p class="text-color">Tech skills used:</p>
-            <p>
-              <a class="btn btn-secondary btn-pink" href="#"
-                >View details &raquo;</a
-              >
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-
-        <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading text-color">
-              Snap shot of "About" section goes here with diff pictures
-            </h2>
-            <p class="lead">
-              <!-- Some great placeholder content for the first featurette here.
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading text-color">
+                            Snap shot of "About" section goes here with diff
+                            pictures
+                        </h2>
+                        <p class="lead">
+                            <!-- Some great placeholder content for the first featurette here.
               Imagine some exciting prose here. -->
-            </p>
-          </div>
+                        </p>
+                    </div>
 
-          <div class="col-md-5">
-            <svg
-              class="
-                bd-placeholder-img bd-placeholder-img-lg
-                featurette-image
-                img-fluid
-                mx-auto
-              "
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
+                    <div class="col-md-5 d-flex justify-content-center">
+                        <img src="img/frontend.png" alt="" />
+                    </div>
+                </div>
 
-        <hr class="featurette-divider" />
+                <hr class="featurette-divider" />
 
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading text-color">CV/ Experience maybe?</h2>
-            <p class="lead">
-              <!-- Another featurette? Of course. More placeholder content here to
+                <div class="row featurette">
+                    <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading text-color">
+                            CV/ Experience maybe?
+                        </h2>
+                        <p class="lead">
+                            <!-- Another featurette? Of course. More placeholder content here to
               give you an idea of how this layout would work with some actual
               real-world content in place. -->
-            </p>
-          </div>
-          <!-- Bootstrap Order class has used to display image and text accodring to their position 
+                        </p>
+                    </div>
+                    <!-- Bootstrap Order class has used to display image and text accodring to their position 
             Similar to how order attribute is used in flexbox -->
-          <div class="col-md-5 order-md-1">
-            <svg
-              class="
-                bd-placeholder-img bd-placeholder-img-lg
-                featurette-image
-                img-fluid
-                mx-auto
-              "
-              width="500"
-              height="500"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
+                    <div class="col-md-5 order-md-1">
+                        <svg
+                            class="
+                                bd-placeholder-img bd-placeholder-img-lg
+                                featurette-image
+                                img-fluid
+                                mx-auto
+                            "
+                            width="500"
+                            height="500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="img"
+                            aria-label="Placeholder: 500x500"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                        >
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#eee" />
+                            <text x="50%" y="50%" fill="#aaa" dy=".3em">
+                                500x500
+                            </text>
+                        </svg>
+                    </div>
+                </div>
 
-        <hr class="featurette-divider" />
+                <hr class="featurette-divider" />
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading text-color">Get in touch with me!</h2>
-            <p class="lead text-color">
-              You have an idea in your mind? reach out! I'd love to have a chat!
-            </p>
-          </div>
-          <div class="col-md-5" id="contact">
-            <a href="https://www.linkedin.com/in/yujin-ok-726a99173/"
-              ><img class="contact__img" src="./img/likedinOrange.png" alt=""
-            /></a>
+                <div class="row featurette">
+                    <div
+                        class="
+                            col
+                            d-flex
+                            flex-row
+                            align-items-center
+                            justify-content-center
+                        "
+                    >
+                        <h2 class="featurette-heading text-color" id="contact">
+                            Get in touch with me!
+                        </h2>
+                        <!-- <p class="lead text-color">
+                            You have an idea in your mind? reach out! I'd love
+                            to have a chat!
+                        </p> -->
+                        <a
+                            href="https://www.linkedin.com/in/yujin-ok-726a99173/"
+                            ><img
+                                class="contact__img"
+                                src="./img/likedinOrange.png"
+                                alt=""
+                        /></a>
 
-            <a href="tel:0424358191"
-              ><img class="contact__img" src="./img/phoneOrange.png" alt=""
-            /></a>
-            <a href="https://github.com/YujinOk"
-              ><img class="contact__img" src="./img/githubOrange.png" alt=""
-            /></a>
-            <a href="mailto:yujinok63@gmail.com"
-              ><img class="contact__img" src="./img/emailOrange.png" alt=""
-            /></a>
-          </div>
-        </div>
+                        <a href="https://github.com/YujinOk"
+                            ><img
+                                class="contact__img"
+                                src="./img/githubOrange.png"
+                                alt=""
+                        /></a>
+                        <a href="mailto:yujinok63@gmail.com"
+                            ><img
+                                class="contact__img"
+                                src="./img/emailOrange.png"
+                                alt=""
+                        /></a>
+                    </div>
+                </div>
 
-        <hr class="featurette-divider" />
+                <hr class="featurette-divider" />
 
-        <!-- /END THE FEATURETTES -->
-      </div>
-      <!-- /.container -->
+                <!-- /END THE FEATURETTES -->
+            </div>
+            <!-- /.container -->
 
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>
-          &copy; 2017–2021 Company, Inc. &middot;
-          <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-        </p>
-      </footer>
-    </main>
+            <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-end"><a href="#">Back to top</a></p>
+                <p>
+                    &copy; 2017–2021 Company, Inc. &middot;
+                    <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+                </p>
+            </footer>
+        </main>
 
-    <!-- <div class="container">
+        <!-- <div class="container">
       <div class="row">
         <div class="bg-dark col">Column</div>
         <div class="bg-light col">Column</div>
         <div class="bg-light col">Column</div>
       </div>
     </div> -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
