@@ -121,7 +121,8 @@ body {
     height: 300px;
     width: 290px;
     border-radius: 50%;
-    border: 3px solid #ff857a;
+    border: 10px solid #ff857a;
+    margin-top: 13.5px;
 }
 .container__titleImg {
     display: flex;
@@ -150,4 +151,7 @@ a {
 }
 .lab {
     margin-top: 90px;
+}
+.rounded-circle {
+    border: 7px solid #ff857a;
 }
