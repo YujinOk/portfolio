@@ -41,10 +41,19 @@
                     </button>
                     <!-- Collapse feature -->
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <ul
+                            class="
+                                navbar-nav
+                                me-auto
+                                mb-2 mb-md-0
+                                d-flex
+                                justify-content-start
+                            "
+                        >
                             <!-- breakpoints e.g. sm < 450px , md <750px -->
                             <li class="nav-item">
                                 <a
+                                    id="abt"
                                     class="nav-link text-white"
                                     aria-current="page"
                                     href="./html/about.html"
@@ -52,16 +61,25 @@
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#projects"
+                                <a
+                                    id="project"
+                                    class="nav-link text-white"
+                                    href="#projects"
                                     >Projects</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
+                                    id="navContact"
                                     class="nav-link text-white"
                                     href="#contact
                 "
                                     >Contact</a
+                                >
+                            </li>
+                            <li class="nav-item" id="langHolder">
+                                <a class="nav-link text-white" id="lang"
+                                    >Language 🌐</a
                                 >
                             </li>
                         </ul>
@@ -214,10 +232,27 @@
                             </text>
                         </svg>
 
-                        <h2 class="text-color">Project 1</h2>
+                        <h2 class="text-color">Calculator</h2>
                         <p class="text-color">Tech skills used:</p>
+                        <div
+                            class="
+                                project__details
+                                d-flex
+                                justify-content-center
+                            "
+                        >
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS & SCSS</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </div>
                         <p>
-                            <a class="btn btn-pink text-white" href="yujinok.github.io/calculator/"
+
+                            <a
+                                class="btn btn-pink text-white"
+                                href="https://yujinok.github.io/calculator/"
+
                                 >View details &raquo;</a
                             >
                         </p>
@@ -408,6 +443,7 @@
         <div class="bg-light col">Column</div>
       </div>
     </div> -->
+        <script src="script.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
