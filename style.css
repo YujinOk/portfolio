@@ -163,6 +163,6 @@ ul {
     padding: 0;
     margin: 0;
 }
-#lang {
-    margin-left: 980px;
+#langHolder {
+    margin-left: auto;
 }
