@@ -166,3 +166,11 @@ ul {
 #langHolder {
     margin-left: auto;
 }
+
+.img__tech {
+    width: 70%;
+    height: 70%;
+}
+.project__details {
+    padding-bottom: 2%;
+}
