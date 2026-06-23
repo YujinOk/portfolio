@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -14,19 +15,19 @@ const projects = [
 		title: 'Superhero Search App',
 		description: 'Full-stack tech test. Search for superheroes, view and edit their power stats, and save to a personal list. Built a GraphQL API from scratch backed by AWS DynamoDB.',
 		tags: ['React', 'GraphQL', 'AWS DynamoDB'],
-		href: '/projects',
+		href: `${base}/projects`,
 	},
 	{
 		title: 'K-Ecommerce Store',
 		description: 'A Korean-themed ecommerce storefront built with React.',
 		tags: ['React', 'CSS', 'SCSS'],
-		href: '/projects',
+		href: `${base}/projects`,
 	},
 	{
 		title: 'Google Book UI',
 		description: 'A UI clone of Google Books with search functionality.',
 		tags: ['HTML', 'CSS', 'JavaScript'],
-		href: '/projects',
+		href: `${base}/projects`,
 	},
 ];
 ---
@@ -185,15 +186,15 @@ const projects = [
 					haematology lab tech — now building things on the web.
 				</p>
 				<div class="hero-links">
-					<a href="/projects" class="btn btn-primary">See my work</a>
-					<a href="/about" class="btn btn-secondary">About me</a>
+					<a href={`${base}/projects`} class="btn btn-primary">See my work</a>
+					<a href={`${base}/about`} class="btn btn-secondary">About me</a>
 				</div>
 			</div>
 
 			<section>
 				<div class="section-header">
 					<h2>Projects</h2>
-					<a href="/projects">View all →</a>
+					<a href={`${base}/projects`}>View all →</a>
 				</div>
 				<div class="cards">
 					{projects.map((project) => (
@@ -213,11 +214,11 @@ const projects = [
 			<section>
 				<div class="section-header">
 					<h2>Recent posts</h2>
-					<a href="/blog">View all →</a>
+					<a href={`${base}/blog`}>View all →</a>
 				</div>
 				<div class="post-list">
 					{posts.map((post) => (
-						<a href={`/blog/${post.id}/`} class="post-item">
+						<a href={`${base}/blog/${post.id}/`} class="post-item">
 							<span class="post-title">{post.data.title}</span>
 							<span class="post-date">
 								{post.data.pubDate.toLocaleDateString('en-AU', { year: 'numeric', month: 'short', day: 'numeric' })}
