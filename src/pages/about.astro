@@ -1,0 +1,140 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title="About | Yujin Ok" description="My story — from South Korea to Melbourne, fitness instructor to developer." />
+		<style>
+			main {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 2em 1em;
+			}
+			.section {
+				display: flex;
+				gap: 2em;
+				align-items: flex-start;
+				margin-bottom: 4em;
+			}
+			.section.reverse {
+				flex-direction: row-reverse;
+			}
+			.section img {
+				width: 300px;
+				height: 400px;
+				object-fit: cover;
+				border-radius: 8px;
+				flex-shrink: 0;
+			}
+			.section-text h2 {
+				font-size: 1.8rem;
+				margin-bottom: 0.5em;
+			}
+			.section-text p {
+				line-height: 1.8;
+				color: rgb(var(--gray-dark));
+			}
+			hr {
+				margin: 2em 0;
+				border: none;
+				border-top: 1px solid rgb(var(--gray-light));
+			}
+			@media (max-width: 640px) {
+				.section, .section.reverse {
+					flex-direction: column;
+				}
+				.section img {
+					width: 100%;
+					height: 300px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>About Me</h1>
+			<hr />
+
+			<div class="section">
+				<img src="/img/psy.jpg" alt="Yujin" />
+				<div class="section-text">
+					<h2>My journey started from...</h2>
+					<p>
+						I am originally from South Korea, but I have travelled to several places and have been
+						living in Melbourne, Australia for 10 years.
+					</p>
+					<p>
+						I came to Australia with one backpack and a two-month travelling plan with the intention
+						of learning more about fitness instructing, as I was already a fitness instructor in
+						Korea. But quickly, I fell so in love with this city that I never went back home.
+					</p>
+					<p>
+						I have previously travelled across 11 different states in America on a 6-week road trip
+						and have also visited Sydney, Brisbane and the Sunshine Coast in Queensland. I also took
+						a cruise to Fukuoka, Japan — Gangnam Style was hitting the world back then so I did a
+						lot of that horse dancing with Japanese strangers! And I rode a motorcycle through Baja,
+						Mexico. Rough on the body, lifetime experience.
+					</p>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="section reverse">
+				<img src="/img/dance2.jpg" alt="Yujin dancing" />
+				<div class="section-text">
+					<h2>My career in the past...</h2>
+					<p>
+						I have always loved dancing since I started being able to walk. I used to teach K-pop
+						dance choreography back in Korea, and that interest developed further into fitness
+						instructing. I have been instructing various classes at many different fitness facilities
+						back home and here in Melbourne for 14 years.
+					</p>
+					<p>
+						The combination of my passion for the movement of the human body and my interest in
+						clinical knowledge drove me to go back to university in 2018 to study a Bachelor of
+						Health Science, majoring in human anatomy and physiology.
+					</p>
+					<p>
+						Upon completing my degree, I was offered a full-time job at a Haematology lab where I
+						helped perform full blood tests and much more — pretty much whatever your doctor
+						requests.
+					</p>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="section">
+				<img src="/img/lab2.jpg" alt="Lab work" />
+				<div class="section-text">
+					<h2>How I got into coding...</h2>
+					<p>
+						As the pandemic hit in 2020, just like many of you, I was stuck at home finishing my
+						degree. I was also teaching dance fitness classes via Zoom to Koreans and my gym clients
+						here. Some requested if I could pre-record the classes and make them available. So I
+						attempted to make videos with the intention of using YouTube — but this later developed
+						into an idea: "how can I make my own platform to put all my content where I can also
+						make revenue?"
+					</p>
+					<p>
+						I started teaching myself HTML and CSS through various online materials. This continued
+						even after getting a full-time job. I also started noticing everyday problems around me
+						— the lab software had inefficiencies that made my daily work harder, and I kept
+						thinking about how I could fix them.
+					</p>
+					<p>
+						Seeing these problems made my learning more engaging and personal. Leaving full-time
+						work in the middle of a pandemic was one of the hardest decisions I've made, but I took
+						the risk because I was too curious and really wanted to learn programming seriously.
+					</p>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

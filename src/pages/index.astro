@@ -1,0 +1,232 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
+
+const projects = [
+	{
+		title: 'Superhero Search App',
+		description: 'Full-stack tech test. Search for superheroes, view and edit their power stats, and save to a personal list. Built a GraphQL API from scratch backed by AWS DynamoDB.',
+		tags: ['React', 'GraphQL', 'AWS DynamoDB'],
+		href: '/projects',
+	},
+	{
+		title: 'K-Ecommerce Store',
+		description: 'A Korean-themed ecommerce storefront built with React.',
+		tags: ['React', 'CSS', 'SCSS'],
+		href: '/projects',
+	},
+	{
+		title: 'Google Book UI',
+		description: 'A UI clone of Google Books with search functionality.',
+		tags: ['HTML', 'CSS', 'JavaScript'],
+		href: '/projects',
+	},
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 0 1em;
+			}
+
+			/* Hero */
+			.hero {
+				padding: 5em 0 3em;
+			}
+			.hero h1 {
+				font-size: 3rem;
+				margin: 0 0 0.25em;
+				line-height: 1.1;
+			}
+			.hero p {
+				font-size: 1.2rem;
+				color: rgb(var(--gray));
+				max-width: 540px;
+				line-height: 1.7;
+				margin: 0 0 1.5em;
+			}
+			.hero-links {
+				display: flex;
+				gap: 1em;
+			}
+			.btn {
+				padding: 0.6em 1.4em;
+				border-radius: 6px;
+				text-decoration: none;
+				font-size: 0.95rem;
+			}
+			.btn-primary {
+				background: var(--accent);
+				color: white;
+			}
+			.btn-secondary {
+				border: 1px solid rgb(var(--gray-light));
+				color: rgb(var(--gray-dark));
+			}
+
+			/* Sections */
+			section {
+				padding: 3em 0;
+				border-top: 1px solid rgb(var(--gray-light));
+			}
+			.section-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				margin-bottom: 1.5em;
+			}
+			.section-header h2 {
+				margin: 0;
+				font-size: 1.4rem;
+			}
+			.section-header a {
+				font-size: 0.9rem;
+				color: var(--accent);
+				text-decoration: none;
+			}
+			.section-header a:hover {
+				text-decoration: underline;
+			}
+
+			/* Project cards */
+			.cards {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+				gap: 1.2em;
+			}
+			.card {
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 8px;
+				padding: 1.2em;
+				text-decoration: none;
+				color: inherit;
+				display: flex;
+				flex-direction: column;
+				gap: 0.6em;
+				transition: border-color 0.15s;
+			}
+			.card:hover {
+				border-color: var(--accent);
+			}
+			.card h3 {
+				margin: 0;
+				font-size: 1rem;
+			}
+			.card p {
+				margin: 0;
+				font-size: 0.9rem;
+				color: rgb(var(--gray));
+				line-height: 1.6;
+				flex: 1;
+			}
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4em;
+			}
+			.tag {
+				font-size: 0.75rem;
+				padding: 0.2em 0.6em;
+				border-radius: 4px;
+				background: rgb(var(--gray-light));
+				color: rgb(var(--gray-dark));
+			}
+
+			/* Blog posts */
+			.post-list {
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+			}
+			.post-item {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				text-decoration: none;
+				color: inherit;
+				padding: 0.75em 0;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.post-item:hover .post-title {
+				color: var(--accent);
+			}
+			.post-title {
+				font-size: 1rem;
+				font-weight: 500;
+			}
+			.post-date {
+				font-size: 0.85rem;
+				color: rgb(var(--gray));
+				white-space: nowrap;
+				margin-left: 1em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="hero">
+				<h1>Hi, I'm Yujin.</h1>
+				<p>
+					Developer based in Melbourne. Previously a fitness instructor, health scientist, and
+					haematology lab tech — now building things on the web.
+				</p>
+				<div class="hero-links">
+					<a href="/projects" class="btn btn-primary">See my work</a>
+					<a href="/about" class="btn btn-secondary">About me</a>
+				</div>
+			</div>
+
+			<section>
+				<div class="section-header">
+					<h2>Projects</h2>
+					<a href="/projects">View all →</a>
+				</div>
+				<div class="cards">
+					{projects.map((project) => (
+						<a href={project.href} class="card">
+							<h3>{project.title}</h3>
+							<p>{project.description}</p>
+							<div class="tags">
+								{project.tags.map((tag) => (
+									<span class="tag">{tag}</span>
+								))}
+							</div>
+						</a>
+					))}
+				</div>
+			</section>
+
+			<section>
+				<div class="section-header">
+					<h2>Recent posts</h2>
+					<a href="/blog">View all →</a>
+				</div>
+				<div class="post-list">
+					{posts.map((post) => (
+						<a href={`/blog/${post.id}/`} class="post-item">
+							<span class="post-title">{post.data.title}</span>
+							<span class="post-date">
+								{post.data.pubDate.toLocaleDateString('en-AU', { year: 'numeric', month: 'short', day: 'numeric' })}
+							</span>
+						</a>
+					))}
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
