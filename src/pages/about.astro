@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <html lang="en">
@@ -60,7 +61,7 @@ import Footer from '../components/Footer.astro';
 			<hr />
 
 			<div class="section">
-				<img src="/img/psy.jpg" alt="Yujin" />
+				<img src={`${base}/img/psy.jpg`} alt="Yujin" />
 				<div class="section-text">
 					<h2>My journey started from...</h2>
 					<p>
@@ -85,7 +86,7 @@ import Footer from '../components/Footer.astro';
 			<hr />
 
 			<div class="section reverse">
-				<img src="/img/dance2.jpg" alt="Yujin dancing" />
+				<img src={`${base}/img/dance2.jpg`} alt="Yujin dancing" />
 				<div class="section-text">
 					<h2>My career in the past...</h2>
 					<p>
@@ -110,7 +111,7 @@ import Footer from '../components/Footer.astro';
 			<hr />
 
 			<div class="section">
-				<img src="/img/lab2.jpg" alt="Lab work" />
+				<img src={`${base}/img/lab2.jpg`} alt="Lab work" />
 				<div class="section-text">
 					<h2>How I got into coding...</h2>
 					<p>
